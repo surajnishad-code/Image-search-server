@@ -8,6 +8,10 @@ app.use(cors());
 
 const PORT = process.env.PORT || 5000;
 
+app.get("/", (req, res) => {
+  res.send("Server is running 🚀");
+});
+
 app.get("/api/search", async (req, res) => {
   try {
     const { query, page } = req.query;
